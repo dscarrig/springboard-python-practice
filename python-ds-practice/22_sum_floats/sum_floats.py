@@ -8,6 +8,8 @@ def sum_floats(nums):
         0
     """
 
+    return sum([n for n in nums if isinstance(n, float)])
+
     # hint: to find out if something is a float, you should use the
     # "isinstance" function --- research how to use this to find out
     # if something is a float!

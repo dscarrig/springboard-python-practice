@@ -1,3 +1,5 @@
+
+
 def mode(nums):
     """Return most-common number in list.
 
@@ -11,3 +13,17 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    most = nums[0]
+    counts = {}
+
+    for n in nums:
+        counts[n] = counts.get(n, 0) + 1
+
+    for n in nums:
+        if(counts[n] > counts[most]):
+            most = counts[n]
+
+    return most
+
+print(mode([1, 2, 1]))
+print(mode([2, 2, 3, 3, 2]))
